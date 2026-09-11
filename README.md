@@ -1,67 +1,106 @@
-# Gold Price Prediction
+# Gold Price Prediction using Machine Learning
 
 ## 📌 Project Overview
 
-This project focuses on predicting gold prices using historical market data and machine learning techniques.
+This project predicts gold prices using historical financial market data and machine learning.
 
-The project includes data preprocessing, exploratory data analysis, feature engineering, model training, and model evaluation to identify a suitable machine learning model for gold price prediction.
+The project analyzes relationships between gold prices and selected financial indicators, including the S&P 500 Index (SPX), United States Oil Fund (USO), Silver (SLV), and EUR/USD exchange rate.
+
+A Random Forest Regressor is trained to predict the gold price (GLD) based on these market features.
 
 ## 🎯 Objectives
 
 - Analyze historical gold price data
-- Perform data preprocessing and cleaning
-- Explore relationships between market features and gold prices
-- Train machine learning regression models
-- Evaluate model performance
-- Predict gold prices based on relevant market features
+- Perform data exploration and preprocessing
+- Study correlations between financial variables
+- Select relevant features for prediction
+- Train a machine learning regression model
+- Evaluate model performance using R² score
+- Compare actual and predicted gold prices
 
-## 🛠️ Technologies Used
+## 📊 Dataset
+
+The dataset contains **2,290 records and 6 columns**:
+
+| Feature | Description |
+|---|---|
+| Date | Historical date |
+| SPX | S&P 500 Index |
+| GLD | Gold price / target variable |
+| USO | United States Oil Fund |
+| SLV | Silver price |
+| EUR/USD | EUR to USD exchange rate |
+
+## 🛠️ Technologies & Libraries
 
 - Python
 - Google Colab
-- Pandas
 - NumPy
+- Pandas
 - Matplotlib
 - Seaborn
 - Scikit-learn
-- Machine Learning
-- Regression Algorithms
 
 ## 🔍 Project Workflow
 
-1. Data Collection
-2. Data Cleaning and Preprocessing
-3. Exploratory Data Analysis
-4. Feature Engineering
-5. Train-Test Split
-6. Model Training
-7. Model Evaluation
-8. Gold Price Prediction
+1. Import required libraries
+2. Load the historical gold price dataset
+3. Explore the dataset
+4. Check dataset dimensions and data types
+5. Check for missing values
+6. Generate statistical summaries
+7. Analyze feature correlations
+8. Separate features and target variable
+9. Split the dataset into training and testing sets
+10. Train a Random Forest Regression model
+11. Generate predictions
+12. Evaluate model performance
+13. Compare actual and predicted gold prices
 
-## 🤖 Machine Learning
+## 🤖 Machine Learning Model
 
-Different regression algorithms were explored and evaluated to determine the model that provides suitable prediction performance for the dataset.
+### Random Forest Regressor
 
-Model performance was evaluated using appropriate regression metrics.
+A Random Forest Regressor is used to predict the gold price.
 
-## 📊 Results
+**Model configuration:**
 
-The trained machine learning models were evaluated on test data, and the model performance was compared to identify the best-performing approach.
+- Number of estimators: 100
+- Test size: 20%
+- Random state for train-test split: 2
 
-The complete implementation and results are available in the Jupyter Notebook:
+## 📈 Model Performance
 
-**[Gold_Price_Prediction.ipynb](Gold_Price_Prediction.ipynb)**
+The model achieved an **R² score of 0.9895** on the test dataset.
+
+This indicates a strong fit between the model's predictions and the actual target values within the evaluated dataset.
+
+## 📉 Actual vs Predicted Values
+
+The project includes a visualization comparing the actual gold prices with the prices predicted by the Random Forest model.
+
+## 📓 Google Colab Notebook
+
+The complete implementation is available in:
+
+`Gold_Price_Prediction.ipynb`
+
+The notebook contains the complete data analysis, model training, predictions, evaluation, and visualization.
 
 ## 🚀 How to Run
 
-1. Download or clone this repository.
+1. Clone or download this repository.
 2. Open `Gold_Price_Prediction.ipynb`.
 3. Open the notebook using Google Colab or Jupyter Notebook.
-4. Install the required Python libraries if necessary.
+4. Make sure the dataset file is available.
 5. Run the notebook cells sequentially.
 
 ## 👨‍💻 Author
 
 **Devi Naga Charan Vasanthala**
 
-This project was developed as part of my learning and practical work in **Data Analytics and Machine Learning**.
+Data Analytics & Machine Learning
+
+---
+
+⭐ If you find this project useful, consider giving the repository a star.
